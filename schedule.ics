@@ -1,0 +1,720 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly Planner//EN
+X-WR-CALNAME:My Schedule Jun-Jul 2026
+X-WR-TIMEZONE:Europe/London
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:20260628-run@planner
+SUMMARY:🏃 Morning Run (5k – easy pace)
+DTSTART:20260628T080000
+DTEND:20260628T090000
+DESCRIPTION:Easy 5k to start the week. Keep HR low. Hydrate well after.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260628-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260628T123000
+DTEND:20260628T143000
+DESCRIPTION:New York market open. Focus on your watchlist and setups. Journal every trade.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260628-mealprep@planner
+SUMMARY:🍱 Meal Prep & Early Night
+DTSTART:20260628T150000
+DTEND:20260628T180000
+DESCRIPTION:Prep meals for the week ahead. Eat well. Aim for early sleep — big week coming.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260629-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260629T090000
+DTEND:20260629T103000
+DESCRIPTION:Strength training. Focus on compound lifts. Leave energy in the tank — don't max out.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260629-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260629T123000
+DTEND:20260629T143000
+DESCRIPTION:New York market open. Stick to your plan. No revenge trading.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260629-rest@planner
+SUMMARY:😴 Rest & Recovery
+DTSTART:20260629T150000
+DTEND:20260629T170000
+DESCRIPTION:Post-gym recovery. Protein meal. Light stretching or foam roll.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260630-run@planner
+SUMMARY:🏃 Morning Run (5–6k)
+DTSTART:20260630T080000
+DTEND:20260630T090000
+DESCRIPTION:5–6k at conversational pace. This is an active recovery run after yesterday's gym.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260630-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260630T123000
+DTEND:20260630T143000
+DESCRIPTION:New York market open. Review morning analysis before session starts.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260630-rest@planner
+SUMMARY:😴 Rest & Light Stretch
+DTSTART:20260630T150000
+DTEND:20260630T160000
+DESCRIPTION:Light stretching or yoga. Eat a good dinner. Relax.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260701-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260701T090000
+DTEND:20260701T103000
+DESCRIPTION:Strength training. Finish by 10:30 — you have work at 15:00. Eat a proper lunch after trading.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260701-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260701T123000
+DTEND:20260701T143000
+DESCRIPTION:New York market open. Close positions and log trades by 14:30 — work at 15:00.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260701-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260701T150000
+DTEND:20260701T230000
+DESCRIPTION:Late shift. Eat well before you go in. Stay hydrated during shift.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260702-rest@planner
+SUMMARY:🚶 Recovery Walk (Light Only)
+DTSTART:20260702T090000
+DTEND:20260702T100000
+DESCRIPTION:Back-to-back late shifts. No gym or run today — short walk is enough. Prioritise food and hydration.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260702-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260702T123000
+DTEND:20260702T143000
+DESCRIPTION:New York market open. Keep it simple — you have back-to-back shifts. Don't overtrade.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260702-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260702T150000
+DTEND:20260702T230000
+DESCRIPTION:Late shift. Second day in a row — pace yourself. Eat a good meal before going in.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260703-run@planner
+SUMMARY:🏃 Morning Run (Easy – Post Shifts)
+DTSTART:20260703T093000
+DTEND:20260703T103000
+DESCRIPTION:Keep it easy today. You finished work at 23:00 last night. 4–5k at a comfortable pace — no pressure.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260703-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260703T123000
+DTEND:20260703T143000
+DESCRIPTION:New York market open. Good free day to focus properly on the session.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260703-rest@planner
+SUMMARY:😴 Rest Afternoon
+DTSTART:20260703T150000
+DTEND:20260703T170000
+DESCRIPTION:Take it easy. Watch something, read. Let your body recover from the run of shifts.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260704-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260704T090000
+DTEND:20260704T103000
+DESCRIPTION:Good solid session. No trading today — rest your mind too. Early Sunday shift tomorrow so no late night.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260704-rest@planner
+SUMMARY:😴 Rest & Leisure – Recharge
+DTSTART:20260704T120000
+DTEND:20260704T200000
+DESCRIPTION:No trading today. Rest and recharge. Early bed tonight — work starts at 07:00 tomorrow.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260705-work@planner
+SUMMARY:💼 Work – Early Shift
+DTSTART:20260705T070000
+DTEND:20260705T150000
+DESCRIPTION:Early shift. Set your alarm for ~06:00. Eat before you leave. No trading today — you'll be at work during NY open.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260705-walk@planner
+SUMMARY:🚶 Light Walk & Stretch (Post Early Shift)
+DTSTART:20260705T153000
+DTEND:20260705T163000
+DESCRIPTION:Gentle walk only after the early shift — no gym, no run. Let the body decompress. Early bed.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260706-run@planner
+SUMMARY:🏃 Morning Run (5k)
+DTSTART:20260706T090000
+DTEND:20260706T100000
+DESCRIPTION:5k at easy pace. Good morning to shake off the early shift hangover from yesterday.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260706-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260706T123000
+DTEND:20260706T143000
+DESCRIPTION:New York market open. Full free afternoon — take the session seriously.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260706-rest@planner
+SUMMARY:😴 Rest & Recovery
+DTSTART:20260706T150000
+DTEND:20260706T170000
+DESCRIPTION:Rest up. Good meal in the evening.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260707-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260707T090000
+DTEND:20260707T103000
+DESCRIPTION:Strength session. Push a bit harder today — free afternoon follows.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260707-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260707T123000
+DTEND:20260707T143000
+DESCRIPTION:New York market open. Post-gym — eat well before sitting down to trade.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260707-rest@planner
+SUMMARY:😴 Rest Afternoon
+DTSTART:20260707T150000
+DTEND:20260707T170000
+DESCRIPTION:Chill. No obligations tonight.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260708-run@planner
+SUMMARY:🏃 Morning Run (5k)
+DTSTART:20260708T090000
+DTEND:20260708T100000
+DESCRIPTION:5k before a late shift. Running in the morning means you're done before work and still full of energy for trading.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260708-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260708T123000
+DTEND:20260708T143000
+DESCRIPTION:New York market open. Close out by 14:30 — shift starts at 15:00. Have lunch ready in advance.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260708-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260708T150000
+DTEND:20260708T230000
+DESCRIPTION:Late shift. Fuelled and ready after morning run and trading session.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260709-rest@planner
+SUMMARY:🚶 Rest Morning – Post-Shift Recovery
+DTSTART:20260709T090000
+DTEND:20260709T120000
+DESCRIPTION:Late finish last night at 23:00. Take the morning easy. Light walk at most.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260709-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260709T123000
+DTEND:20260709T143000
+DESCRIPTION:New York market open. Good free day — post-shift so be alert to whether you feel sharp enough to trade.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260710-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260710T090000
+DTEND:20260710T103000
+DESCRIPTION:Good session today — fully free day. Push a solid workout.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260710-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260710T123000
+DTEND:20260710T143000
+DESCRIPTION:New York market open. Free afternoon after — good day to really focus.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260710-rest@planner
+SUMMARY:😴 Rest – Prep for Tomorrow's Shift
+DTSTART:20260710T150000
+DTEND:20260710T170000
+DESCRIPTION:Late shift tomorrow. Good night's sleep tonight. Don't stay up too late.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260711-walk@planner
+SUMMARY:🚶 Light Morning Walk & Stretch
+DTSTART:20260711T090000
+DTEND:20260711T100000
+DESCRIPTION:No hard training today — late shift ahead. Light walk and stretching only.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260711-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260711T123000
+DTEND:20260711T143000
+DESCRIPTION:New York market open. Wrap up by 14:30 — shift in 30 mins. Lunch before you go in.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260711-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260711T150000
+DTEND:20260711T230000
+DESCRIPTION:Late shift.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260712-rest@planner
+SUMMARY:😴 Rest – Back-to-Back Shifts
+DTSTART:20260712T090000
+DTEND:20260712T120000
+DESCRIPTION:Second late shift in a row. Rest the body. Light walk only if you feel like it. Food & hydration priority.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260712-trade@planner
+SUMMARY:📊 Quick Trading Review (Short Session)
+DTSTART:20260712T123000
+DTEND:20260712T140000
+DESCRIPTION:Shortened session — back-to-back shifts. Review charts and journal only. Don't force trades.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260712-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260712T150000
+DTEND:20260712T230000
+DESCRIPTION:Late shift. Stay fuelled — second day in a row.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260713-run@planner
+SUMMARY:🏃 Morning Run (Easy 5k – Post Shifts)
+DTSTART:20260713T093000
+DTEND:20260713T103000
+DESCRIPTION:Easy pace only. You've done two late shifts — flush the legs out gently. 4–5k max.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260713-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260713T123000
+DTEND:20260713T143000
+DESCRIPTION:New York market open. Free day — take your time with the session.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260713-rest@planner
+SUMMARY:😴 Rest & Recovery
+DTSTART:20260713T150000
+DTEND:20260713T170000
+DESCRIPTION:Recover properly. Protein meal. Light stretch.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260714-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260714T090000
+DTEND:20260714T103000
+DESCRIPTION:Strength session. Body should be recovered now — good session today.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260714-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260714T123000
+DTEND:20260714T143000
+DESCRIPTION:New York market open. Eat a good lunch between gym and the session.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260714-rest@planner
+SUMMARY:😴 Rest Afternoon
+DTSTART:20260714T150000
+DTEND:20260714T170000
+DESCRIPTION:Relax. No shift tonight.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260715-run@planner
+SUMMARY:🏃 Morning Run (5–6k)
+DTSTART:20260715T090000
+DTEND:20260715T100000
+DESCRIPTION:5–6k before a late shift. Solid routine — run in morning, trade at noon, work at 15:00.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260715-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260715T123000
+DTEND:20260715T143000
+DESCRIPTION:New York market open. Cut off at 14:30 sharp — work at 15:00. Have your kit ready.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260715-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260715T150000
+DTEND:20260715T230000
+DESCRIPTION:Late shift.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260716-rest@planner
+SUMMARY:🚶 Active Recovery Morning
+DTSTART:20260716T090000
+DTEND:20260716T103000
+DESCRIPTION:Post-shift morning. Light walk or gentle stretch. No hard training — 3 late shifts incoming Fri/Sat/Sun.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260716-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260716T123000
+DTEND:20260716T143000
+DESCRIPTION:New York market open. Free afternoon — sharp focus. Journal everything.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260716-leisure@planner
+SUMMARY:🎮 Leisure – Prep for 3-Day Stretch
+DTSTART:20260716T150000
+DTEND:20260716T210000
+DESCRIPTION:Relax fully. Three late shifts in a row coming up. Food prep, early night.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260717-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260717T090000
+DTEND:20260717T103000
+DESCRIPTION:Strength session before the shift. Don't go too heavy — work at 15:00. Eat well after.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260717-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260717T123000
+DTEND:20260717T143000
+DESCRIPTION:New York market open. Gym + trade + work — full productive day. Wrap up trading by 14:30.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260717-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260717T150000
+DTEND:20260717T230000
+DESCRIPTION:Late shift. Day 1 of 3 consecutive late shifts.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260718-walk@planner
+SUMMARY:🚶 Light Morning Walk
+DTSTART:20260718T090000
+DTEND:20260718T100000
+DESCRIPTION:Day 2 of 3 late shifts. No training today — light walk only. Conserve energy.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260718-trade@planner
+SUMMARY:📊 Quick Trading Review
+DTSTART:20260718T123000
+DTEND:20260718T140000
+DESCRIPTION:Shortened session. Back-to-back shifts — review and journal only if fatigued. Quality over quantity.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260718-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260718T150000
+DTEND:20260718T230000
+DESCRIPTION:Late shift. Day 2 of 3 consecutive late shifts.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260719-walk@planner
+SUMMARY:🚶 Light Morning Walk
+DTSTART:20260719T090000
+DTEND:20260719T100000
+DESCRIPTION:Day 3 of 3 late shifts + night shift starts tonight at 23:00. Light walk only. Rest and food.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260719-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260719T150000
+DTEND:20260719T230000
+DESCRIPTION:Late shift. Day 3 of 3. Night shift begins at 23:00 tonight — stay hydrated.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260720-rest@planner
+SUMMARY:😴 Rest & Night Shift Prep
+DTSTART:20260720T090000
+DTEND:20260720T180000
+DESCRIPTION:Prepare your body for the night shift. Nap in the afternoon if possible. Eat a substantial meal before 22:00. No gym, no trading.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260720-work@planner
+SUMMARY:🌙 Work – Night Shift (23:00–07:00)
+DTSTART:20260720T230000
+DTEND:20260721T070000
+DESCRIPTION:Night shift. Stay hydrated throughout. Bring food. Your body clock will be off — be kind to yourself.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260721-sleep@planner
+SUMMARY:😴 Sleep – Post Night Shift
+DTSTART:20260721T070000
+DTEND:20260721T140000
+DESCRIPTION:Get home and sleep. Blackout curtains if you have them. No alarm — sleep as long as needed.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260721-recovery@planner
+SUMMARY:🚶 Very Light Walk & Recovery
+DTSTART:20260721T150000
+DTEND:20260721T160000
+DESCRIPTION:Gentle 20-min walk. No gym, no run, no trading. Hydrate and eat good food. Try to sleep at a normal time tonight to reset your clock.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260722-graduation@planner
+SUMMARY:🎓 GF Graduation – Liverpool Cathedral
+DTSTART:20260722
+DTEND:20260723
+DESCRIPTION:Your girlfriend's graduation at Liverpool Cathedral. Travel to Liverpool. Celebrate properly — no training, no trading. This is her day. Enjoy every moment of it.
+CATEGORIES:PERSONAL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260723-run@planner
+SUMMARY:🏃 Morning Run – Gentle Return to Routine
+DTSTART:20260723T090000
+DTEND:20260723T100000
+DESCRIPTION:Easy 4–5k. After night shift + graduation, ease back in gently. Movement will help reset your rhythm.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260723-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260723T123000
+DTEND:20260723T143000
+DESCRIPTION:New York market open. Back to routine. Free afternoon — take your time and trade well.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260723-rest@planner
+SUMMARY:😴 Rest Afternoon
+DTSTART:20260723T150000
+DTEND:20260723T170000
+DESCRIPTION:Take it easy. Consistent sleep tonight for the late shifts ahead.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260724-gym@planner
+SUMMARY:🏋️ Gym – Strength Session
+DTSTART:20260724T090000
+DTEND:20260724T103000
+DESCRIPTION:Strength session before late shift. You're back in the groove — solid session.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260724-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260724T123000
+DTEND:20260724T143000
+DESCRIPTION:New York market open. Gym + trade + work — strong day. Cut off at 14:30.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260724-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260724T150000
+DTEND:20260724T230000
+DESCRIPTION:Late shift.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260725-walk@planner
+SUMMARY:🚶 Light Morning Walk
+DTSTART:20260725T090000
+DTEND:20260725T100000
+DESCRIPTION:Back-to-back late shifts. Light walk only — no heavy training.
+CATEGORIES:HEALTH
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260725-trade@planner
+SUMMARY:📊 Quick Trading Review
+DTSTART:20260725T123000
+DTEND:20260725T140000
+DESCRIPTION:Short review session. Check open positions, journal yesterday's trades. Don't force new entries.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260725-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260725T150000
+DTEND:20260725T230000
+DESCRIPTION:Late shift.
+CATEGORIES:WORK
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260726-run@planner
+SUMMARY:🏃 Morning Run (Easy 5k)
+DTSTART:20260726T090000
+DTEND:20260726T100000
+DESCRIPTION:Easy 5k to close out the stretch. You've worked hard — enjoy the run.
+CATEGORIES:FITNESS
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260726-trade@planner
+SUMMARY:📈 Trading – NY Open Session
+DTSTART:20260726T123000
+DTEND:20260726T143000
+DESCRIPTION:New York market open. Last trading session of this block — make it count.
+CATEGORIES:TRADING
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260726-work@planner
+SUMMARY:💼 Work – Late Shift
+DTSTART:20260726T150000
+DTEND:20260726T230000
+DESCRIPTION:Late shift. Final shift of this planning block — well done for getting through it.
+CATEGORIES:WORK
+END:VEVENT
+
+END:VCALENDAR

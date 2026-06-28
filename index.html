@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Planner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #222536;
+      --border: #2e3250;
+      --text: #e8eaf6;
+      --muted: #8b90b8;
+      --work-late: #3b4fc8;
+      --work-early: #1a8a6e;
+      --work-night: #6b21a8;
+      --gym: #b45309;
+      --run: #0e7490;
+      --trade: #15803d;
+      --event: #be123c;
+      --rest: #374151;
+      --accent: #6366f1;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .week-block {
+      margin-bottom: 36px;
+    }
+
+    .week-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .day-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.15s;
+    }
+
+    .day-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .day-card.today {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .day-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .day-date {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .today-badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .events {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .event {
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .event .time {
+      font-size: 0.68rem;
+      opacity: 0.8;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .event.work-late  { background: rgba(59,79,200,0.25); border-left: 3px solid var(--work-late); color: #a5b4fc; }
+    .event.work-early { background: rgba(26,138,110,0.25); border-left: 3px solid var(--work-early); color: #6ee7b7; }
+    .event.work-night { background: rgba(107,33,168,0.25); border-left: 3px solid var(--work-night); color: #d8b4fe; }
+    .event.gym        { background: rgba(180,83,9,0.25);  border-left: 3px solid var(--gym);  color: #fbbf24; }
+    .event.run        { background: rgba(14,116,144,0.25); border-left: 3px solid var(--run); color: #67e8f9; }
+    .event.trade      { background: rgba(21,128,61,0.25); border-left: 3px solid var(--trade); color: #86efac; }
+    .event.special    { background: rgba(190,18,60,0.25); border-left: 3px solid var(--event); color: #fda4af; }
+    .event.rest       { background: rgba(55,65,81,0.3);  border-left: 3px solid var(--rest);  color: #9ca3af; }
+    .event.note       { background: rgba(99,102,241,0.1); border-left: 3px solid var(--accent); color: #c7d2fe; font-size: 0.72rem; }
+
+    .rest-day {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-style: italic;
+      padding: 4px 0;
+    }
+
+    @media (max-width: 480px) {
+      .days-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Weekly Planner</h1>
+  <p>Jun 28 &ndash; Jul 26, 2026 &nbsp;&middot;&nbsp; Health-first schedule</p>
+</header>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#3b4fc8"></div> Late shift (15-23)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#1a8a6e"></div> Early shift (07-15)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6b21a8"></div> Night shift (23-07)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#b45309"></div> Gym</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#0e7490"></div> Run</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#15803d"></div> Trading (NY open)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#be123c"></div> Special event</div>
+</div>
+
+<div id="planner"></div>
+
+<script>
+const schedule = [
+  {
+    week: "Week 1 &mdash; Jun 28 &ndash; Jul 4",
+    days: [
+      {
+        name: "Sun", date: "28 Jun", today: true,
+        events: [
+          { type: "run",   time: "08:00",       label: "Morning run (5k) – easy pace" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "note",  time: "",             label: "Meal prep for the week. Early night." }
+        ]
+      },
+      {
+        name: "Mon", date: "29 Jun",
+        events: [
+          { type: "gym",   time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest & recovery" }
+        ]
+      },
+      {
+        name: "Tue", date: "30 Jun",
+        events: [
+          { type: "run",   time: "08:00",       label: "Morning run (5-6k)" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest & light stretch" }
+        ]
+      },
+      {
+        name: "Wed", date: "1 Jul",
+        events: [
+          { type: "gym",       time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Thu", date: "2 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Rest – recovery walk only" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Fri", date: "3 Jul",
+        events: [
+          { type: "run",   time: "09:30",       label: "Morning run (easy – post back-to-back shifts)" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest afternoon" }
+        ]
+      },
+      {
+        name: "Sat", date: "4 Jul",
+        events: [
+          { type: "gym",  time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "rest", time: "12:00+",       label: "Rest & leisure – no trading today" },
+          { type: "note", time: "",             label: "Recharge before early Sunday shift" }
+        ]
+      }
+    ]
+  },
+  {
+    week: "Week 2 &mdash; Jul 5 &ndash; Jul 11",
+    days: [
+      {
+        name: "Sun", date: "5 Jul",
+        events: [
+          { type: "work-early", time: "07:00–15:00", label: "Work – early shift" },
+          { type: "rest",       time: "15:30+",       label: "Light walk only – no heavy training" },
+          { type: "note",       time: "",             label: "Early bed – recover for the week" }
+        ]
+      },
+      {
+        name: "Mon", date: "6 Jul",
+        events: [
+          { type: "run",   time: "09:00",       label: "Morning run (5k)" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest & recovery" }
+        ]
+      },
+      {
+        name: "Tue", date: "7 Jul",
+        events: [
+          { type: "gym",   time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest afternoon" }
+        ]
+      },
+      {
+        name: "Wed", date: "8 Jul",
+        events: [
+          { type: "run",       time: "09:00",       label: "Morning run (5k)" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Thu", date: "9 Jul",
+        events: [
+          { type: "rest",  time: "Morning",     label: "Rest morning – post-shift recovery" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Leisure – easy evening" }
+        ]
+      },
+      {
+        name: "Fri", date: "10 Jul",
+        events: [
+          { type: "gym",   time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest – big shift tomorrow" }
+        ]
+      },
+      {
+        name: "Sat", date: "11 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Light morning – walk/stretch only" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      }
+    ]
+  },
+  {
+    week: "Week 3 &mdash; Jul 12 &ndash; Jul 18",
+    days: [
+      {
+        name: "Sun", date: "12 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Rest – back-to-back shifts" },
+          { type: "trade",     time: "12:30–14:00", label: "Quick trading review only" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Mon", date: "13 Jul",
+        events: [
+          { type: "run",   time: "09:30",       label: "Morning run (5k – easy after run of shifts)" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest & recovery" }
+        ]
+      },
+      {
+        name: "Tue", date: "14 Jul",
+        events: [
+          { type: "gym",   time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest afternoon" }
+        ]
+      },
+      {
+        name: "Wed", date: "15 Jul",
+        events: [
+          { type: "run",       time: "09:00",       label: "Morning run (5-6k)" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Thu", date: "16 Jul",
+        events: [
+          { type: "rest",  time: "Morning",     label: "Rest morning – active recovery" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Leisure – prep for 3 late shifts" }
+        ]
+      },
+      {
+        name: "Fri", date: "17 Jul",
+        events: [
+          { type: "gym",       time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Sat", date: "18 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Rest – light walk, no training" },
+          { type: "trade",     time: "12:30–14:00", label: "Quick trading review" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      }
+    ]
+  },
+  {
+    week: "Week 4 &mdash; Jul 19 &ndash; Jul 26",
+    days: [
+      {
+        name: "Sun", date: "19 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Rest – light walk only" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" },
+          { type: "note",      time: "",            label: "Night shift begins 23:00 tonight" }
+        ]
+      },
+      {
+        name: "Mon", date: "20 Jul",
+        events: [
+          { type: "rest",       time: "Morning",     label: "Rest – prep for night shift" },
+          { type: "rest",       time: "Afternoon",   label: "Nap / wind-down (no trading today)" },
+          { type: "work-night", time: "23:00–07:00", label: "Work – night shift" }
+        ]
+      },
+      {
+        name: "Tue", date: "21 Jul",
+        events: [
+          { type: "rest", time: "07:00–14:00", label: "Sleep – post night shift" },
+          { type: "rest", time: "Afternoon",   label: "Very light walk, hydrate & eat well" },
+          { type: "note", time: "",            label: "Recovery day. No gym, no running, no trading." }
+        ]
+      },
+      {
+        name: "Wed", date: "22 Jul",
+        events: [
+          { type: "special", time: "All day", label: "🎓 GF Graduation – Liverpool Cathedral" },
+          { type: "note",    time: "",        label: "Travel to Liverpool. Celebrate – no training, no trading. Enjoy the day!" }
+        ]
+      },
+      {
+        name: "Thu", date: "23 Jul",
+        events: [
+          { type: "run",   time: "09:00",       label: "Morning run – gentle return to routine" },
+          { type: "trade", time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "rest",  time: "15:00+",       label: "Rest afternoon" }
+        ]
+      },
+      {
+        name: "Fri", date: "24 Jul",
+        events: [
+          { type: "gym",       time: "09:00–10:30", label: "Gym – strength session" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Sat", date: "25 Jul",
+        events: [
+          { type: "rest",      time: "Morning",     label: "Rest – light morning walk" },
+          { type: "trade",     time: "12:30–14:00", label: "Quick trading review" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      },
+      {
+        name: "Sun", date: "26 Jul",
+        events: [
+          { type: "run",       time: "09:00",       label: "Morning run (easy 5k)" },
+          { type: "trade",     time: "12:30–14:30", label: "Trading – NY open" },
+          { type: "work-late", time: "15:00–23:00", label: "Work – late shift" }
+        ]
+      }
+    ]
+  }
+];
+
+const planner = document.getElementById('planner');
+
+schedule.forEach(week => {
+  const block = document.createElement('div');
+  block.className = 'week-block';
+
+  const label = document.createElement('div');
+  label.className = 'week-label';
+  label.innerHTML = week.week;
+  block.appendChild(label);
+
+  const grid = document.createElement('div');
+  grid.className = 'days-grid';
+
+  week.days.forEach(day => {
+    const card = document.createElement('div');
+    card.className = 'day-card' + (day.today ? ' today' : '');
+
+    const header = document.createElement('div');
+    header.className = 'day-header';
+
+    const nameDate = document.createElement('div');
+    nameDate.innerHTML = `<div class="day-name">${day.name}</div><div class="day-date">${day.date}</div>`;
+    header.appendChild(nameDate);
+
+    if (day.today) {
+      const badge = document.createElement('span');
+      badge.className = 'today-badge';
+      badge.textContent = 'TODAY';
+      header.appendChild(badge);
+    }
+
+    card.appendChild(header);
+
+    const events = document.createElement('div');
+    events.className = 'events';
+
+    day.events.forEach(ev => {
+      const el = document.createElement('div');
+      el.className = `event ${ev.type}`;
+      el.innerHTML = (ev.time ? `<span class="time">${ev.time}</span>` : '') + ev.label;
+      events.appendChild(el);
+    });
+
+    card.appendChild(events);
+    grid.appendChild(card);
+  });
+
+  block.appendChild(grid);
+  planner.appendChild(block);
+});
+</script>
+</body>
+</html>
